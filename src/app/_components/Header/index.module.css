@@ -1,0 +1,23 @@
+.header {
+  width: 100vw;
+  height: 70px;
+  padding-inline: 40px;
+  background: linear-gradient(180deg, var(--bg-color-gradation));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_container__logo {
+  background-color: aqua;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
