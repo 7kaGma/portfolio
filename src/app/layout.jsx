@@ -1,7 +1,5 @@
 import './globals.css';
-import { notoSans } from '../../utils/font';
-import { notoSerif } from '../../utils/font';
-import { cinzel } from '../../utils/font';
+import { notoSerif } from '@@/utils/font';
 import Header from '@/app/_components/Header/index';
 
 export const metadata = {
@@ -13,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='ja'>
       <body className={notoSerif.className}>
-        <Header/>
-        {children}
+        <Header />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
