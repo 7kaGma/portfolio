@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './index.module.css';
 import { cinzel } from '@@/utils/font';
-import cx from "classnames";
+import cx from 'classnames';
 import Menu from '../Menu';
 
 const index = () => {
@@ -10,11 +10,11 @@ const index = () => {
       <div className={styles.header_container}>
         <Link
           href='/'
-          className={cx(styles.header_container__logo,cinzel.className)}
+          className={cx(styles.header_container__logo, cinzel.className)}
         >
-          Kero's Diary
+          NAKAG's DIARY
         </Link>
-        <Menu/>
+        <Menu />
       </div>
     </header>
   );
