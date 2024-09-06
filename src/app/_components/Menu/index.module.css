@@ -4,15 +4,19 @@
 .nav_container{
   display: flex;
   gap: 40px;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
 }
 
 
 
 .btn{
   display: none;
-  position: relative;
+  position: fixed;
+  top: 10px;
+  right:10px;
   width: 50px;
   height: 50px;
 }

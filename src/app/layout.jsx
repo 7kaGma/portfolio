@@ -1,6 +1,7 @@
 import './globals.css';
 import { notoSerif } from '@@/utils/font';
-import Header from '@/app/_components/Header/index';
+import Header from './_components/Header/index';
+import Footer from './_components/Footer';
 
 export const metadata = {
   title: 'Keroの冒険日誌',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );
