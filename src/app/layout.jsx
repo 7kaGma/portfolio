@@ -1,10 +1,10 @@
 import './globals.css';
 import { notoSerif } from '@@/utils/font';
-import Header from './_components/Header/index';
 import Footer from './_components/Footer';
+import Header from './_components/Header/index';
 
 export const metadata = {
-  title: 'NAKAG\'s DIARY',
+  title: "NAKAG's DIARY",
   description: 'NAKAGのポートフォリオサイトです',
 };
 
@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang='ja'>
       <body className={notoSerif.className}>
         <Header />
-        <main>{children}</main>
+        <main className={notoSerif.className}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

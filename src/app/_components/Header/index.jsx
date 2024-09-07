@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import styles from './index.module.css';
 import { cinzel } from '@@/utils/font';
 import cx from 'classnames';
+import Link from 'next/link';
 import Menu from '../Menu';
+import styles from './index.module.css';
 
 const index = () => {
   return (
@@ -10,9 +10,12 @@ const index = () => {
       <div className={styles.header_container}>
         <Link
           href='/'
-          className={cx(styles.header_container__logo, cinzel.className)}
+          className={cx(
+            styles.header_container__logo,
+            cinzel.className,
+          )}
         >
-          NAKAG's DIARY
+          NAKAG&apos;s DIARY
         </Link>
         <Menu />
       </div>
