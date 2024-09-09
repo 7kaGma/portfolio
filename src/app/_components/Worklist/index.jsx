@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import ImageBox from '../ImageBox';
 import Tag from '../Tag';
 import styles from './index.module.css';
-import ImageBox from '../ImageBox';
 
 const Worklist = ({ data }) => {
   if (data.contents.length === 0) {
@@ -18,8 +17,8 @@ const Worklist = ({ data }) => {
           key={article.id}
         >
           <Link href={`/work/${article.id}`}>
-            <ImageBox 
-              image={article.image} 
+            <ImageBox
+              image={article.image}
               name={article.name}
             />
             <dl>

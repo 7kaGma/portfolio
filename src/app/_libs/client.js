@@ -18,7 +18,10 @@ const client = createClient({
 export const getWorks = async (queries) => {
   const listData = await client.getList({
     endpoint: 'work',
-    queries,
+    queries: {
+      order: 'date',
+      fields: 'id,name,category,image',
+    },
   });
   return listData;
 };
