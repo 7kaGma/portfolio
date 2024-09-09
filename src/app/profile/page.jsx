@@ -9,7 +9,6 @@ import styles from './page.module.css';
 
 export default async function Page() {
   const data = await getProfile();
-  console.log(data);
   return (
     <>
       <section className={styles.profile}>

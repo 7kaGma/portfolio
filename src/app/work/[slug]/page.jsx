@@ -7,12 +7,8 @@ import Secondarybtn from '@/app/_components/SecondaryBtn';
 import { getWorksDetail } from '@/app/_libs/client';
 import { formatDate } from '@/app/_libs/utils';
 
-export default async function Page({
-  params,
-}) {
+export default async function Page({ params }) {
   const data = await getWorksDetail(params.slug);
-  data
-  console.log(data);
 
   return (
     <>
@@ -38,9 +34,7 @@ export default async function Page({
                 公開日:{formatDate(data.date)}
               </li>
               <li>制作期間:{data.period}</li>
-              <li>
-                使用技術:{data.techniques}
-              </li>
+              <li>使用技術:{data.techniques}</li>
             </ul>
             <div
               className={

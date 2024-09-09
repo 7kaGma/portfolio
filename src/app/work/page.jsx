@@ -7,7 +7,6 @@ import styles from './page.module.css';
 
 export default async function Page() {
   const data = await getWorks();
-  console.log(data);
 
   return (
     <>
