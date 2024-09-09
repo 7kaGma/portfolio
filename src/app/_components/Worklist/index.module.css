@@ -9,17 +9,11 @@
   background-image: url(/map.jpg);
   background-position: center;
   background-size: cover;
-  padding: 70px;
   color:var(--font-color-sub);
   border: 4px solid var(--frame-color);
+  padding:70px
 }
 
-
-.image__img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 @media(max-width:756px){
   .container{
@@ -27,5 +21,6 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    padding: 20px;
   }
 }

@@ -23,6 +23,26 @@ export const getWorks = async (queries) => {
   return listData;
 };
 
+export const getWorksDetail = async (
+  contentId,
+  queries,
+) => {
+  const detailData = await client.getListDetail({
+    endpoint: 'work',
+    contentId,
+    queries,
+    customRequestInit: {
+      next: {
+        revalidate:
+          queries?.draftKey === undefined
+            ? 60
+            : 0,
+      },
+    },
+  });
+  return detailData;
+};
+
 export const getProfile = async () => {
   const data = await client.get({
     endpoint: 'profile',

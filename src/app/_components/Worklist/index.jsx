@@ -1,30 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './index.module.css';
 import Tag from '../Tag';
+import styles from './index.module.css';
+import ImageBox from '../ImageBox';
 
 const Worklist = ({ data }) => {
   if (data.contents.length === 0) {
     return <p>準備中です</p>;
   }
+
+  console.log(data.contents[0].image);
   return (
     <ul className={styles.container}>
       {data.contents.map((article) => (
-        <li className={styles.list}key={article.id}>
-          <div className={styles.image}>
-            <Image
-              className={styles.image__img}
-              src={article.image.url}
-              alt={article.name}
-              width={600}
-              height={450}
-              priority
+        <li
+          className={styles.list}
+          key={article.id}
+        >
+          <Link href={`/work/${article.id}`}>
+            <ImageBox 
+              image={article.image} 
+              name={article.name}
             />
-          </div>
-          <dl>
-            <dt>{article.name}</dt>
-            <Tag category={article.category} />
-          </dl>
+            <dl>
+              <dt>{article.name}</dt>
+              <Tag category={article.category} />
+            </dl>
+          </Link>
         </li>
       ))}
     </ul>

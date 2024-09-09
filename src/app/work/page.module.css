@@ -1,5 +1,17 @@
-.work{
+.work {
   width: 100%;
   max-width: 1440px;
   padding-block: 40px;
+}
+
+.work_title {
+  font-weight: 400;
+  font-size: 4.4rem;
+  color: var(--font-color-primary);
+}
+
+@media (max-width: 756px) {
+  .work {
+    width: 90%;
+  }
 }

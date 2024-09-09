@@ -1,14 +1,17 @@
 import { cinzel } from '@@/utils/font';
 import cx from 'classnames';
 import Image from 'next/image';
-import styles from './page.module.css';
 import { getProfile } from '../_libs/client';
+import styles from './page.module.css';
+import ImageBox from '../_components/ImageBox';
+import Secondarybtn from '../_components/SecondaryBtn';
+import Primarybtn from '../_components/PrimaryBtn';
 
 export default async function Page() {
   const data = await getProfile();
   console.log(data);
-
   return (
+    <>
     <section className={styles.profile}>
       <h1
         className={cx(
@@ -19,19 +22,13 @@ export default async function Page() {
         Profile
       </h1>
       <div className={styles.profile_container}>
-        <div
-          className={
-            styles.profile_container__image
-          }
-        >
-          <Image
-            src='/profile.jpg'
-            alt='NAKAGの写真'
-            width={900}
-            height={1200}
-            priority
-          />
+        <div className={styles.profile_container__image}>
+        <ImageBox 
+          image={data.image}
+          name={data.introduction}
+        />
         </div>
+      
         <div
           className={
             styles.profile_container__text
@@ -42,9 +39,9 @@ export default async function Page() {
           <dl className={styles.explain}>
             <dt>Future vision</dt>
             <dd>{data.vision}</dd>
-            <dt>Techniques I've used</dt>
+            <dt>Techniques</dt>
             <dd>{data.techniques}</dd>
-            <dt>Tools I've used</dt>
+            <dt>Tools</dt>
             <dd>{data.tools}</dd>
             <dt>Hobby</dt>
             <dd>{data.hobby}</dd>
@@ -52,5 +49,7 @@ export default async function Page() {
         </div>
       </div>
     </section>
+    <Secondarybtn url="/" text="ホーム"/>
+    </>
   );
 }

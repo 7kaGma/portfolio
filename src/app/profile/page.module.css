@@ -8,29 +8,22 @@
   font-weight: 400;
   font-size: 4.4rem;
   color: var(--font-color-primary);
-  
 }
 
 .profile_container {
   border: 4px solid var(--frame-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
   background-image: url(/map.jpg);
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
   gap: 40px;
   padding: 70px;
 }
 
-.profile_container__image {
+.profile_container__image{
   width: 40%;
-}
-
-.profile_container__image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 .profile_container__text {
@@ -67,7 +60,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding: 20px;
+    padding-inline: 20px;
+    padding-top: 30px;
   }
   .profile_container__image {
     width: 100%;

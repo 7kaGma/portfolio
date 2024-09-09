@@ -1,0 +1,11 @@
+.link{
+  display: block;
+  background-color: var(--frame-color);
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  margin-block: 30px;
+}
