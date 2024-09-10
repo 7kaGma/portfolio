@@ -1,4 +1,7 @@
 import { createClient } from 'microcms-js-sdk';
+import { Work_List_Fields } from '../_constants';
+import { Work_List_Orders } from '../_constants';
+import { Work_List_Limit } from '../_constants';
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error(
@@ -18,10 +21,7 @@ const client = createClient({
 export const getWorks = async (queries) => {
   const listData = await client.getList({
     endpoint: 'work',
-    queries: {
-      order: 'date',
-      fields: 'id,name,category,image',
-    },
+    queries,
   });
   return listData;
 };

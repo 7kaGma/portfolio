@@ -4,9 +4,18 @@ import Secondarybtn from '../_components/SecondaryBtn';
 import Worklist from '../_components/Worklist';
 import { getWorks } from '../_libs/client';
 import styles from './page.module.css';
+import { Work_List_Fields } from '../_constants';
+import { Work_List_Limit } from '../_constants';
+import { Work_List_Orders } from '../_constants';
+import Pagenation from '../_components/Pagenation';
 
 export default async function Page() {
-  const data = await getWorks();
+  const data = await getWorks({
+    orders: Work_List_Orders,
+    fields: Work_List_Fields,
+    limit: Work_List_Limit,
+    offset: 0,
+  });
 
   return (
     <>
@@ -20,6 +29,7 @@ export default async function Page() {
           Works
         </h1>
         <Worklist data={data} />
+        <Pagenation totalCount={data.totalCount}/>
       </section>
       <Secondarybtn url='/' text='ホーム' />
     </>

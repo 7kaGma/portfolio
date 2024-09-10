@@ -8,7 +8,6 @@ const Worklist = ({ data }) => {
     return <p>準備中です</p>;
   }
 
-  console.log(data.contents[0].image);
   return (
     <ul className={styles.container}>
       {data.contents.map((article) => (
