@@ -1,8 +1,8 @@
-.nav{
+.nav {
   display: block;
   font-size: 2.6rem;
 }
-.nav_container{
+.nav_container {
   display: flex;
   gap: 40px;
   flex-direction: row;
@@ -10,18 +10,16 @@
   justify-content: space-around;
 }
 
-
-
-.btn{
+.btn {
   display: none;
   position: fixed;
   top: 10px;
-  right:10px;
+  right: 10px;
   width: 50px;
   height: 50px;
 }
 
-.btn span{
+.btn span {
   position: absolute;
   display: inline-block;
   background-color: var(--bg-color-primary);
@@ -30,26 +28,25 @@
   width: 60%;
 }
 
-.btn span:nth-of-type(1){
+.btn span:nth-of-type(1) {
   top: 22px;
-  
 }
-.btn span:nth-of-type(2){
+.btn span:nth-of-type(2) {
   top: 29px;
 }
 
-.active span:nth-child(1){
+.active span:nth-child(1) {
   transform: translateY(3px) rotate(-45deg);
 }
-.active span:nth-child(2){
+.active span:nth-child(2) {
   transform: translateY(-4px) rotate(45deg);
 }
 
-@media(max-width:756px){
-  .btn{
+@media (max-width: 756px) {
+  .btn {
     display: block;
   }
-  .nav{
+  .nav {
     position: fixed;
     top: 0;
     right: 100%;
@@ -58,14 +55,14 @@
     background: var(--bg-color-base);
     display: none;
   }
-  .activeNav{
+  .activeNav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     right: 0;
   }
-  .activeNav ul{
-    padding-left:20%;
+  .activeNav ul {
+    padding-left: 20%;
     flex-direction: column;
     justify-content: start;
     align-items: start;

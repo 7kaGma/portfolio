@@ -9,7 +9,7 @@ const Menu = () => {
   const toggleOpen = () => {
     setState(!isOpen);
   };
-  const open = () => StereoPannerNode(true);
+
   return (
     <>
       <nav
