@@ -28,8 +28,11 @@ export default async function Page() {
         >
           Works
         </h1>
-        <Worklist data={data} />
-        <Pagenation totalCount={data.totalCount}/>
+        <div className={styles.work_container}>
+          <Worklist data={data} />
+          <Pagenation totalCount={data.totalCount}/>
+        </div>
+        
       </section>
       <Secondarybtn url='/' text='ホーム' />
     </>

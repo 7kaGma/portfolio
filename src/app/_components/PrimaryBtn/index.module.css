@@ -9,3 +9,7 @@
   color: white;
   margin-block: 30px;
 }
+
+.hoverBtn{
+  opacity: var(--overray-opacity);
+}

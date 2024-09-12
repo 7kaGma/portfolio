@@ -35,8 +35,10 @@ export default async function Page({ params }) {
         >
           Works
         </h1>
-        <Worklist data={data} />
-        <Pagenation totalCount={data.totalCount}/>
+        <div className={styles.work_container}>
+          <Worklist data={data} />
+          <Pagenation totalCount={data.totalCount} current={current}/>
+        </div>
       </section>
       <Secondarybtn url='/' text='ホーム' />
     </>

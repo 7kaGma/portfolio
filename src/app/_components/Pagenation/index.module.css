@@ -1,15 +1,37 @@
+.pagenation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
 .container{
   margin-inline: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  gap: 10px;
   box-sizing: border-box;
-  gap: 5px;
+  position: relative;
 }
 
+
 .list{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.list__current{
+  display: block;
+  border-bottom: 1px solid var(--frame-color);
+}
+
+.list__number{
+  display: block;
 }
 

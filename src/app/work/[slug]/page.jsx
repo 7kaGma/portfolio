@@ -6,6 +6,7 @@ import Primarybtn from '@/app/_components/PrimaryBtn';
 import Secondarybtn from '@/app/_components/SecondaryBtn';
 import { getWorksDetail } from '@/app/_libs/client';
 import { formatDate } from '@/app/_libs/utils';
+import { no_image } from '@/app/_constants';
 
 export default async function Page({ params }) {
   const data = await getWorksDetail(params.slug);
@@ -57,7 +58,7 @@ export default async function Page({ params }) {
             }
           >
             <ImageBox
-              image={data.image}
+              image={data.image ? data.image : no_image} 
               name={data.name}
             />
           </div>

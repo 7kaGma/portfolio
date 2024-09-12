@@ -1,8 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import styles from './index.module.css';
+import Logo from '@/app/_components/Logo';
+import { github, qiita,twitter,facebook } from '@/app/_constants';
 
 const Footer = () => {
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_border}>
@@ -12,62 +13,11 @@ const Footer = () => {
               styles.footer_cotainer__iconbox
             }
           >
-            <li>
-              <Link
-                href='https://github.com/7kaGma'
-                target='_blank'
-              >
-                <Image
-                  src='/github_logo.svg'
-                  alt='git_logo'
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='https://www.facebook.com/profile.php?id=61558376931429'
-                target='_blank'
-              >
-                <Image
-                  src='/facebook_logo.svg'
-                  alt='facebook_logo'
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='https://qiita.com/Madao_2306'
-                target='_blank'
-              >
-                <Image
-                  src='/qiita_logo.svg'
-                  alt='Qiita_logo'
-                  width={40}
-                  height={40}
-                  priority
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='https://x.com/Kero_forStudyP'
-                target='_blank'
-              >
-                <Image
-                  src='/x_logo.svg'
-                  alt='x_logo'
-                  width={30}
-                  height={30}
-                  priority
-                />
-              </Link>
-            </li>
+            <Logo logo={github}/>
+            <Logo logo={facebook}/>
+            <Logo logo={qiita}/>
+            <Logo logo={twitter}/>
+            
           </ul>
           <small
             className={

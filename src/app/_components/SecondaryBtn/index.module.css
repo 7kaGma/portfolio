@@ -10,3 +10,6 @@
   color: var(--font-color-primary);
   margin-block: 30px;
 }
+.hoverBtn{
+  opacity: var(--overray-opacity);
+}

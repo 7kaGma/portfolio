@@ -10,8 +10,28 @@
   color: var(--font-color-primary);
 }
 
+.work_container{
+  background-image: url(/map.jpg);
+  background-position: center;
+  background-size: cover;
+  color:var(--font-color-sub);
+  border: 4px solid var(--frame-color);
+  padding:70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 80px;
+}
+
 @media (max-width: 756px) {
   .work {
     width: 90%;
   }
+  .work_container{
+    padding-block: 30px;
+    padding-inline: 20px;
+    gap: 40px;
+  }
 }
+

@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: start;
     padding-inline: 20px;
-    padding-top: 30px;
+    padding-block: 30px;
   }
   .profile_container__image {
     width: 100%;
