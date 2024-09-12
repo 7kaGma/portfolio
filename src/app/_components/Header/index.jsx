@@ -1,8 +1,8 @@
-import { cinzel } from '@@/utils/font';
 import cx from 'classnames';
 import Link from 'next/link';
 import Menu from '../Menu';
 import styles from './index.module.css';
+import { cinzel } from '@/font';
 
 const index = () => {
   return (

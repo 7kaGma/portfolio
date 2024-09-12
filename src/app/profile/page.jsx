@@ -1,4 +1,3 @@
-import { cinzel } from '@@/utils/font';
 import cx from 'classnames';
 import Image from 'next/image';
 import ImageBox from '../_components/ImageBox';
@@ -6,6 +5,7 @@ import Primarybtn from '../_components/PrimaryBtn';
 import Secondarybtn from '../_components/SecondaryBtn';
 import { getProfile } from '../_libs/client';
 import styles from './page.module.css';
+import { cinzel } from '@/font';
 
 export default async function Page() {
   const data = await getProfile();

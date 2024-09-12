@@ -1,7 +1,5 @@
 const Tag = ({ category }) => {
-  return(
-      <span>{`${category.name}:`}</span>
-  ) ;
+  return <span>{`${category.name}:`}</span>;
 };
 
 export default Tag;

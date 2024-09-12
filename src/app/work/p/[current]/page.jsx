@@ -1,14 +1,16 @@
-import Secondarybtn from '@/app/_components/SecondaryBtn';
-import Worklist from '@/app/_components/Worklist';
-import { getWorks } from '@/app/_libs/client';
-import styles from '@/app/work/page.module.css';
 import cx from 'classnames';
-import { cinzel } from '@@/utils/font';
-import { Work_List_Limit } from '@/app/_constants';
-import { Work_List_Fields } from '@/app/_constants';
-import { Work_List_Orders } from '@/app/_constants';
 import { notFound } from 'next/navigation';
 import Pagenation from '@/app/_components/Pagenation';
+import Secondarybtn from '@/app/_components/SecondaryBtn';
+import Worklist from '@/app/_components/Worklist';
+import {
+  Work_List_Limit,
+  Work_List_Fields,
+  Work_List_Orders,
+} from '@/app/_constants';
+import { getWorks } from '@/app/_libs/client';
+import styles from '@/app/work/page.module.css';
+import { cinzel } from '@/font';
 
 export default async function Page({ params }) {
   const current = parseInt(params.current, 10);
@@ -37,7 +39,10 @@ export default async function Page({ params }) {
         </h1>
         <div className={styles.work_container}>
           <Worklist data={data} />
-          <Pagenation totalCount={data.totalCount} current={current}/>
+          <Pagenation
+            totalCount={data.totalCount}
+            current={current}
+          />
         </div>
       </section>
       <Secondarybtn url='/' text='ホーム' />

@@ -1,7 +1,7 @@
 import './globals.css';
-import { notoSerif } from '@@/utils/font';
-import Footer from './_components/Footer';
-import Header from './_components/Header/index';
+import Footer from '@/app/_components/Footer';
+import Header from '@/app/_components/Header';
+import { notoSerif } from '@/font';
 
 export const metadata = {
   title: "NAKAG's DIARY",

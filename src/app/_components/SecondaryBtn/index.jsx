@@ -1,15 +1,14 @@
 'use client';
+import cx from 'classnames';
 import Link from 'next/link';
-import styles from './index.module.css';
 import { useState } from 'react';
-import cx from "classnames";
-
+import styles from './index.module.css';
 
 const Secondarybtn = ({ text, url }) => {
-  const [onMouse,setState]=useState(false);
-  const hover= ()=>{
+  const [onMouse, setState] = useState(false);
+  const hover = () => {
     setState(!onMouse);
-  }
+  };
   return (
     <>
       <Link

@@ -1,13 +1,15 @@
-import { cinzel } from '@@/utils/font';
 import cx from 'classnames';
-import Secondarybtn from '../_components/SecondaryBtn';
-import Worklist from '../_components/Worklist';
+import {
+  Work_List_Fields,
+  Work_List_Limit,
+  Work_List_Orders,
+} from '../_constants';
 import { getWorks } from '../_libs/client';
 import styles from './page.module.css';
-import { Work_List_Fields } from '../_constants';
-import { Work_List_Limit } from '../_constants';
-import { Work_List_Orders } from '../_constants';
-import Pagenation from '../_components/Pagenation';
+import Pagenation from '@/app/_components/Pagenation';
+import Secondarybtn from '@/app/_components/SecondaryBtn';
+import Worklist from '@/app/_components/Worklist';
+import { cinzel } from '@/font';
 
 export default async function Page() {
   const data = await getWorks({
@@ -30,9 +32,10 @@ export default async function Page() {
         </h1>
         <div className={styles.work_container}>
           <Worklist data={data} />
-          <Pagenation totalCount={data.totalCount}/>
+          <Pagenation
+            totalCount={data.totalCount}
+          />
         </div>
-        
       </section>
       <Secondarybtn url='/' text='ホーム' />
     </>

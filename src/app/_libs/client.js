@@ -1,7 +1,9 @@
 import { createClient } from 'microcms-js-sdk';
-import { Work_List_Fields } from '../_constants';
-import { Work_List_Orders } from '../_constants';
-import { Work_List_Limit } from '../_constants';
+import {
+  Work_List_Fields,
+  Work_List_Orders,
+  Work_List_Limit,
+} from '../_constants';
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error(

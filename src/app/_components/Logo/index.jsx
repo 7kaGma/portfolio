@@ -1,14 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Logo = ({logo}) => {
-  
+const Logo = ({ logo }) => {
   return (
     <li>
-      <Link
-        href='logo.url'
-        target='_blank'
-      >
+      <Link href='logo.url' target='_blank'>
         <Image
           src={logo.image}
           alt='logo'
@@ -18,7 +14,7 @@ const Logo = ({logo}) => {
         />
       </Link>
     </li>
-  )
-}
+  );
+};
 
 export default Logo;
