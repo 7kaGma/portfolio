@@ -34,10 +34,10 @@ const Worklist = ({ data }) => {
               image={article.image ? article.image : no_image} 
               name={article.name}
             />
-            <dl>
-              <dt>{article.name}</dt>
+            <p>
               <Tag category={article.category} />
-            </dl>
+              {article.name}
+            </p>
           </Link>
         </li>
       ))}

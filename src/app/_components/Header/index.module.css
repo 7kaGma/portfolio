@@ -22,13 +22,13 @@
 .header_container__logo {
   color: var(--font-color-primary);
   display: block;
-  width: 250px;
+  width: auto;
   height: 50px;
   -webkit-user-select: none;
   user-select: none;
   text-align: left;
   line-height: 50px;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
 }
 
 @media(max-width:756px){
@@ -37,5 +37,8 @@
   }
   .header_container{
     width: 90%;
+  }
+  .header_container__logo {
+    font-size: 2.6rem;
   }
 }

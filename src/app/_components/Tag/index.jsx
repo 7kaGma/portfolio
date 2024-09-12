@@ -1,7 +1,7 @@
-import styles from './index.module.css';
-
 const Tag = ({ category }) => {
-  return <dd>{category.name}</dd>;
+  return(
+      <span>{`${category.name}:`}</span>
+  ) ;
 };
 
 export default Tag;
