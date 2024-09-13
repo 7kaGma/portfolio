@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Logo = ({ logo }) => {
   return (
     <li>
-      <Link href='logo.url' target='_blank'>
+      <Link href={logo.url} target='_blank'>
         <Image
           src={logo.image}
           alt='logo'

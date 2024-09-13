@@ -11,6 +11,8 @@ import { cinzel } from '@/font';
 export default async function Page({ params }) {
   const data = await getWorksDetail(params.slug);
 
+  console.log(data);
+
   return (
     <>
       <section className={styles.detail}>

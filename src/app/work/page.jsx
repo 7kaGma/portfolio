@@ -19,6 +19,8 @@ export default async function Page() {
     offset: 0,
   });
 
+  console.log(data);
+
   return (
     <>
       <section className={styles.work}>
